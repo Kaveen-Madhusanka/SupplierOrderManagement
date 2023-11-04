@@ -19,9 +19,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7.AzureFunction", "7.AzureF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.ProductService", "5.ProductService", "{DE420DE6-941D-44EE-B740-0A22E1E54DCB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOM.ProductServiceApi", "SOM.ProductServiceApi\SOM.ProductServiceApi.csproj", "{14A8CD0E-0085-4F94-B9C2-C46EB6560833}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14A8CD0E-0085-4F94-B9C2-C46EB6560833}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14A8CD0E-0085-4F94-B9C2-C46EB6560833}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14A8CD0E-0085-4F94-B9C2-C46EB6560833}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14A8CD0E-0085-4F94-B9C2-C46EB6560833}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{14A8CD0E-0085-4F94-B9C2-C46EB6560833} = {DE420DE6-941D-44EE-B740-0A22E1E54DCB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4037BE29-B7EB-4A62-B28D-A3180F82F078}
