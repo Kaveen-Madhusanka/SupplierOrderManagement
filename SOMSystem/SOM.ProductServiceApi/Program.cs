@@ -1,8 +1,10 @@
+using SOM.ProductService.Application;
 using SOM.ProductService.Infastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddApplication(builder.Configuration);
 builder.Services.AddInfastructure(builder.Configuration);
 
 builder.Services.AddControllers();
