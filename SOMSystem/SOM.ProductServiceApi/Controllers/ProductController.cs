@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using SOM.ProductService.Application.Products.Commands;
 using SOM.ProductService.Application.Products.Queries;
 using SOM.ProductService.Domain.Product;
 
@@ -22,6 +23,14 @@ namespace SOM.ProductServiceApi.Controllers
         {
             var results = await _mediator.Send(new GetProductQuery());
             return Ok(results);
+        }
+
+        [HttpPost("CreateProduct", Name = "CreateProduct")]
+        public async Task<ActionResult<int>> CreateProduct(CreateProductCommand command)
+        {
+            var result = await _mediator.Send(command);
+
+            return Ok(result);
         }
     }
 }
