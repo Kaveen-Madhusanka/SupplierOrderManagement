@@ -6,7 +6,7 @@ using System.Reflection;
 
 namespace SOM.ProductService.Infrastructure.Persistant
 {
-    public class ProductDbContext: DbContext, IProductDbContext
+    public class ProductDbContext : DbContext, IProductDbContext
     {
         public ProductDbContext(DbContextOptions<ProductDbContext> options) : base(options)
         {
@@ -19,15 +19,16 @@ namespace SOM.ProductService.Infrastructure.Persistant
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())
         {
             foreach (var entry in ChangeTracker.Entries<AuditableEntity>())
+            {
                 switch (entry.State)
                 {
                     case EntityState.Added:
                         entry.Entity.CreatedBy = "Kaveen";
-                        entry.Entity.Created = DateTime.Now;
+                        entry.Entity.Created = DateTime.UtcNow;
                         break;
                     case EntityState.Modified:
                         entry.Entity.LastModifiedBy = "Kaveen";
-                        entry.Entity.LastModified = DateTime.Now;
+                        entry.Entity.LastModified = DateTime.UtcNow;
                         break;
                     case EntityState.Detached:
                         break;
@@ -38,6 +39,7 @@ namespace SOM.ProductService.Infrastructure.Persistant
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
+            }  
 
             var result = await base.SaveChangesAsync(cancellationToken);
             return result;
