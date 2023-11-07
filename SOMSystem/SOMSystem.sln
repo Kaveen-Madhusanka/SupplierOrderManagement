@@ -18,6 +18,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7.AzureFunction", "7.AzureFunction", "{84B4F67C-5A5C-469A-A11B-5C225B6A97BE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.ProductService", "5.ProductService", "{DE420DE6-941D-44EE-B740-0A22E1E54DCB}"
+	ProjectSection(SolutionItems) = preProject
+		ProductService\README.md = ProductService\README.md
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOM.ProductService.Application", "ProductService\SOM.ProductService.Application\SOM.ProductService.Application.csproj", "{C1C03634-7AAA-4079-A608-3E5D7A1EA708}"
 EndProject
