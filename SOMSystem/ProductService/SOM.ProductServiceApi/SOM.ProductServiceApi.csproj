@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Shared\SOM.Shared\SOM.Shared.csproj" />
     <ProjectReference Include="..\SOM.ProductService.Infastructure\SOM.ProductService.Infastructure.csproj" />
   </ItemGroup>
 
