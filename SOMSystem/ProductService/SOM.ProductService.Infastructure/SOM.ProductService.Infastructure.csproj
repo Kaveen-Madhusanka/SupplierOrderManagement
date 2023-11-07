@@ -25,7 +25,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SOM.ProductService.Application\SOM.ProductService.Application.csproj" />
-    <ProjectReference Include="..\SOM.ProductService.Domain\SOM.ProductService.Domain.csproj" />
   </ItemGroup>
 
 </Project>
