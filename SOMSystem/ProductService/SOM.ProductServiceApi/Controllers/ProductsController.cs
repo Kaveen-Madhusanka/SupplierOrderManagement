@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using SOM.ProductService.Application.Products.Commands;
 using SOM.ProductService.Application.Products.Queries;
 using SOM.ProductService.Domain.Product;
-using SOM.Shared.Common;
+using SOM.Shared.Entities;
 
 namespace SOM.ProductServiceApi.Controllers;
 

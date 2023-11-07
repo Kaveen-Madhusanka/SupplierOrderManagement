@@ -1,4 +1,6 @@
-﻿using SOM.Shared.Common;
+﻿
+
+using SOM.Shared.Entities;
 
 namespace SOM.ProductService.Domain.Product
 {

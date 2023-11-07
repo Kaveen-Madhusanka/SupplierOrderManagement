@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace SOM.Shared.Common
+namespace SOM.Shared.Entities
 {
     [Route("api/[controller]")]
     [ApiController]

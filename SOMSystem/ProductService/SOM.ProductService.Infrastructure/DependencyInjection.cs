@@ -15,13 +15,13 @@ namespace SOM.ProductService.Infrastructure
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<AppDbContext>(options =>
+            services.AddDbContext<ProductDbContext>(options =>
             {
                 options.UseSqlServer(configuration.GetConnectionString("DevConnection"));
                 options.LogTo(Console.WriteLine);
             });
 
-            services.AddScoped<IAppDbContext, AppDbContext>();
+            services.AddScoped<IProductDbContext, ProductDbContext>();
 
             return services;
         }

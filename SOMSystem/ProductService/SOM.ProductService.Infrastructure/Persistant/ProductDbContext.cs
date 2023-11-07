@@ -1,20 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SOM.ProductService.Application.Common.Interface;
-using SOM.ProductService.Domain;
 using SOM.ProductService.Domain.Product;
-using SOM.Shared.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using SOM.Shared.Entities;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SOM.ProductService.Infrastructure.Persistant
 {
-    public class AppDbContext: DbContext, IAppDbContext
+    public class ProductDbContext: DbContext, IProductDbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        public ProductDbContext(DbContextOptions<ProductDbContext> options) : base(options)
         {
 
         }

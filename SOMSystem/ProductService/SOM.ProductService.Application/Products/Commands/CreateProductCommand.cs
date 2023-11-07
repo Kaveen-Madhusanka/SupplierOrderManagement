@@ -13,8 +13,8 @@ namespace SOM.ProductService.Application.Products.Commands
 
     public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, int>
     {
-        private readonly IAppDbContext _appDbContext;
-        public CreateProductCommandHandler(IAppDbContext appDbContext)
+        private readonly IProductDbContext _appDbContext;
+        public CreateProductCommandHandler(IProductDbContext appDbContext)
         {
             _appDbContext= appDbContext;
         }

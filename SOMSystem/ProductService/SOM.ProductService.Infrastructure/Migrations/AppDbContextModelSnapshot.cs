@@ -10,7 +10,7 @@ using SOM.ProductService.Infrastructure.Persistant;
 
 namespace SOM.ProductService.Infrastructure.Migrations
 {
-    [DbContext(typeof(AppDbContext))]
+    [DbContext(typeof(ProductDbContext))]
     partial class AppDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

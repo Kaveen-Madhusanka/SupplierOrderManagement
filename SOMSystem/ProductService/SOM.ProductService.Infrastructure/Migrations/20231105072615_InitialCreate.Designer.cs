@@ -11,7 +11,7 @@ using SOM.ProductService.Infrastructure.Persistant;
 
 namespace SOM.ProductService.Infrastructure.Migrations
 {
-    [DbContext(typeof(AppDbContext))]
+    [DbContext(typeof(ProductDbContext))]
     [Migration("20231105072615_InitialCreate")]
     partial class InitialCreate
     {
