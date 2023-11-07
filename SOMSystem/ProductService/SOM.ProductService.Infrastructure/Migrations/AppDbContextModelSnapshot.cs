@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SOM.ProductService.Infastructure.Persistant;
+using SOM.ProductService.Infrastructure.Persistant;
 
 #nullable disable
 
-namespace SOM.ProductService.Infastructure.Migrations
+namespace SOM.ProductService.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     partial class AppDbContextModelSnapshot : ModelSnapshot
