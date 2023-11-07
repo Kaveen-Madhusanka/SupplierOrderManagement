@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOM.ProductService.Infastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOM.ProductServiceApi", "ProductService\SOM.ProductServiceApi\SOM.ProductServiceApi.csproj", "{7C1E41EE-0581-458F-BCF9-30D13E060FF3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOM.Shared", "Shared\SOM.Shared\SOM.Shared.csproj", "{1263E812-8C7E-4270-AD0C-76EAADEB207B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{7C1E41EE-0581-458F-BCF9-30D13E060FF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C1E41EE-0581-458F-BCF9-30D13E060FF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C1E41EE-0581-458F-BCF9-30D13E060FF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1263E812-8C7E-4270-AD0C-76EAADEB207B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1263E812-8C7E-4270-AD0C-76EAADEB207B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1263E812-8C7E-4270-AD0C-76EAADEB207B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1263E812-8C7E-4270-AD0C-76EAADEB207B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{373D3CCC-ECE0-4CB8-B280-3119568E0B05} = {DE420DE6-941D-44EE-B740-0A22E1E54DCB}
 		{829D6E22-1741-4FC5-9867-27A1815A2997} = {DE420DE6-941D-44EE-B740-0A22E1E54DCB}
 		{7C1E41EE-0581-458F-BCF9-30D13E060FF3} = {DE420DE6-941D-44EE-B740-0A22E1E54DCB}
+		{1263E812-8C7E-4270-AD0C-76EAADEB207B} = {521BDE01-23AB-4E09-B589-2AEBF08935FA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4037BE29-B7EB-4A62-B28D-A3180F82F078}

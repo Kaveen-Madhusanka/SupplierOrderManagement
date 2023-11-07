@@ -3,34 +3,32 @@ using Microsoft.AspNetCore.Mvc;
 using SOM.ProductService.Application.Products.Commands;
 using SOM.ProductService.Application.Products.Queries;
 using SOM.ProductService.Domain.Product;
+using SOM.Shared.Common;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace SOM.ProductServiceApi.Controllers
+namespace SOM.ProductServiceApi.Controllers;
+
+
+public class ProductsController : ApiControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ProductsController : ControllerBase
+    public ProductsController(IMediator mediator) : base(mediator)
     {
-        private readonly IMediator _mediator;
-        public ProductsController(IMediator mediator)
-        {
-            _mediator= mediator;
-        }
+    }
 
-        [HttpGet("",Name = "GetProducts")]
-        public async Task<ActionResult<List<Product>>> GetProducts()
-        {
-            var results = await _mediator.Send(new GetProductQuery());
-            return Ok(results);
-        }
+    [HttpGet("", Name = "GetProducts")]
+    public async Task<ActionResult<List<Product>>> GetProducts()
+    {
+        var results = await _mediator.Send(new GetProductQuery());
+        return Ok(results);
+    }
 
-        [HttpPost("", Name = "CreateProduct")]
-        public async Task<ActionResult<int>> CreateProduct(CreateProductCommand command)
-        {
-            var result = await _mediator.Send(command);
+    [HttpPost("", Name = "CreateProduct")]
+    public async Task<ActionResult<int>> CreateProduct(CreateProductCommand command)
+    {
+        var result = await _mediator.Send(command);
 
-            return Ok(result);
-        }
+        return Ok(result);
     }
 }
+
