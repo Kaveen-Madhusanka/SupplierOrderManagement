@@ -5,8 +5,6 @@ using SOM.ProductService.Application.Products.Queries;
 using SOM.ProductService.Domain.Product;
 using SOM.Shared.Common;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace SOM.ProductServiceApi.Controllers;
 
 

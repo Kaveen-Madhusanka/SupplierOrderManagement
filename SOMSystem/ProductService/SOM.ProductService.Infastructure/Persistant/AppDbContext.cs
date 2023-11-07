@@ -2,6 +2,7 @@
 using SOM.ProductService.Application.Common.Interface;
 using SOM.ProductService.Domain;
 using SOM.ProductService.Domain.Product;
+using SOM.Shared.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +31,6 @@ namespace SOM.ProductService.Infastructure.Persistant
                         entry.Entity.CreatedBy = "Kaveen";
                         entry.Entity.Created = DateTime.Now;
                         break;
-
                     case EntityState.Modified:
                         entry.Entity.LastModifiedBy = "Kaveen";
                         entry.Entity.LastModified = DateTime.Now;
