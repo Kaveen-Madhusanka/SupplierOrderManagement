@@ -10,22 +10,22 @@ namespace SOM.ProductServiceApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductController : ControllerBase
+    public class ProductsController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public ProductController(IMediator mediator)
+        public ProductsController(IMediator mediator)
         {
             _mediator= mediator;
         }
 
-        [HttpGet("GetProducts", Name = "GetProducts")]
+        [HttpGet("",Name = "GetProducts")]
         public async Task<ActionResult<List<Product>>> GetProducts()
         {
             var results = await _mediator.Send(new GetProductQuery());
             return Ok(results);
         }
 
-        [HttpPost("CreateProduct", Name = "CreateProduct")]
+        [HttpPost("", Name = "CreateProduct")]
         public async Task<ActionResult<int>> CreateProduct(CreateProductCommand command)
         {
             var result = await _mediator.Send(command);
