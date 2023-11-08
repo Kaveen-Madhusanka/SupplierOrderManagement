@@ -14,8 +14,8 @@ namespace SOM.ProductService.Application.Products.Queries
 
     public class GetProductQueryHandler : IRequestHandler<GetProductQuery, List<Product>>
     {
-        private readonly IAppDbContext _appDbContext;
-        public GetProductQueryHandler(IAppDbContext appDbContext)
+        private readonly IProductDbContext _appDbContext;
+        public GetProductQueryHandler(IProductDbContext appDbContext)
         {
             _appDbContext = appDbContext;
         }

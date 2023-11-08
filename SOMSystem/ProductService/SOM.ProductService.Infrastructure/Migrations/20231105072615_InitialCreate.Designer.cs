@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SOM.ProductService.Infastructure.Persistant;
+using SOM.ProductService.Infrastructure.Persistant;
 
 #nullable disable
 
-namespace SOM.ProductService.Infastructure.Migrations
+namespace SOM.ProductService.Infrastructure.Migrations
 {
-    [DbContext(typeof(AppDbContext))]
+    [DbContext(typeof(ProductDbContext))]
     [Migration("20231105072615_InitialCreate")]
     partial class InitialCreate
     {

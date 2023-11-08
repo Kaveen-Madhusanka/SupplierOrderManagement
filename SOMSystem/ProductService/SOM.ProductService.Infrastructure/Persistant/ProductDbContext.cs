@@ -1,19 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SOM.ProductService.Application.Common.Interface;
-using SOM.ProductService.Domain;
 using SOM.ProductService.Domain.Product;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using SOM.Shared.Entities;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace SOM.ProductService.Infastructure.Persistant
+namespace SOM.ProductService.Infrastructure.Persistant
 {
-    public class AppDbContext: DbContext, IAppDbContext
+    public class ProductDbContext : DbContext, IProductDbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        public ProductDbContext(DbContextOptions<ProductDbContext> options) : base(options)
         {
 
         }
@@ -24,16 +19,16 @@ namespace SOM.ProductService.Infastructure.Persistant
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())
         {
             foreach (var entry in ChangeTracker.Entries<AuditableEntity>())
+            {
                 switch (entry.State)
                 {
                     case EntityState.Added:
                         entry.Entity.CreatedBy = "Kaveen";
-                        entry.Entity.Created = DateTime.Now;
+                        entry.Entity.Created = DateTime.UtcNow;
                         break;
-
                     case EntityState.Modified:
                         entry.Entity.LastModifiedBy = "Kaveen";
-                        entry.Entity.LastModified = DateTime.Now;
+                        entry.Entity.LastModified = DateTime.UtcNow;
                         break;
                     case EntityState.Detached:
                         break;
@@ -44,6 +39,7 @@ namespace SOM.ProductService.Infastructure.Persistant
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
+            }  
 
             var result = await base.SaveChangesAsync(cancellationToken);
             return result;

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SOM.ProductService.Infastructure.Persistant.Configuration
+namespace SOM.ProductService.Infrastructure.Persistant.Configuration
 {
     public class ProductCategoryConfig : IEntityTypeConfiguration<ProductCategory>
     {
