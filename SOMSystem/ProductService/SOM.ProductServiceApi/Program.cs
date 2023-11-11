@@ -1,7 +1,14 @@
+using Serilog;
 using SOM.ProductService.Application;
 using SOM.ProductService.Infrastructure;
+using SOM.Shared.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseSerilog((ctx, lc) => lc
+    .WriteTo.Console()
+    .WriteTo.Seq("http://localhost:5341"));
+
 
 // Add services to the container.
 builder.Services.AddApplication(builder.Configuration);
@@ -21,7 +28,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+
 app.UseHttpsRedirection();
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseAuthorization();
 

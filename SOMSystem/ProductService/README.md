@@ -1,6 +1,14 @@
 ## SOM.ProductServiceApi
 
-### Database Code First Migration
+### Add new migration 
+In **Package Manager console**
 ```
-> ef .....
+> update-database
+```
+
+
+### Update database for existing migrations
+In **Package Manager console**
+```
+> update-database
 ```

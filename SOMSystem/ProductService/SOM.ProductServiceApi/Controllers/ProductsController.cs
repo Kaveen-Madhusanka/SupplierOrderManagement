@@ -10,13 +10,16 @@ namespace SOM.ProductServiceApi.Controllers;
 
 public class ProductsController : ApiControllerBase
 {
-    public ProductsController(IMediator mediator) : base(mediator)
+    private readonly ILogger<ProductsController> _logger;
+    public ProductsController(IMediator mediator, ILogger<ProductsController> logger) : base(mediator)
     {
+        _logger = logger;
     }
 
     [HttpGet("", Name = "GetProducts")]
     public async Task<ActionResult<List<Product>>> GetProducts()
     {
+        _logger.LogInformation("Logging GetProducts ");
         var results = await _mediator.Send(new GetProductQuery());
         return Ok(results);
     }

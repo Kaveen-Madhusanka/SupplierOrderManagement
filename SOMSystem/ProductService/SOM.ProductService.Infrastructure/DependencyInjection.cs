@@ -17,7 +17,7 @@ namespace SOM.ProductService.Infrastructure
         {
             services.AddDbContext<ProductDbContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("DevConnection"));
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
                 options.LogTo(Console.WriteLine);
             });
 
