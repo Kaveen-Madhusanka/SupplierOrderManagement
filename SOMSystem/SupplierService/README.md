@@ -1,4 +1,4 @@
-## SOM.ProductServiceApi
+## SOM.SupplierServiceApi
 
 ### Add new migration 
 In **Package Manager console**

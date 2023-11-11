@@ -26,7 +26,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\SOM.Shared\SOM.Shared.csproj" />
-    <ProjectReference Include="..\SOM.ProductService.Infrastructure\SOM.ProductService.Infrastructure.csproj" />
+    <ProjectReference Include="..\SOM.SupplierService.Infrastructure\SOM.SupplierService.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

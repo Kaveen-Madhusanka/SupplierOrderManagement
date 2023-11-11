@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  som.productserviceapi:
+    image: ${DOCKER_REGISTRY-}somproductserviceapi
+    build:
+      context: .
+      dockerfile: ProductService/SOM.ProductServiceApi/Dockerfile
+
+  som.supplierserviceapi:
+    image: ${DOCKER_REGISTRY-}somsupplierserviceapi
+    build:
+      context: .
+      dockerfile: SupplierService/SOM.SupplierServiceApi/Dockerfile

@@ -1,23 +1,23 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using SOM.ProductService.Application.Products.Commands;
-using SOM.ProductService.Application.Products.Queries;
-using SOM.ProductService.Domain.Product;
+using SOM.SupplierService.Application.Products.Commands;
+using SOM.SupplierService.Application.Products.Queries;
+using SOM.SupplierService.Domain.Product;
 using SOM.Shared.Entities;
 
-namespace SOM.ProductServiceApi.Controllers;
+namespace SOM.SupplierServiceApi.Controllers;
 
 
-public class ProductsController : ApiControllerBase
+public class SuppliersController : ApiControllerBase
 {
-    private readonly ILogger<ProductsController> _logger;
-    public ProductsController(IMediator mediator, ILogger<ProductsController> logger) : base(mediator)
+    private readonly ILogger<SuppliersController> _logger;
+    public SuppliersController(IMediator mediator, ILogger<SuppliersController> logger) : base(mediator)
     {
         _logger = logger;
     }
 
     [HttpGet("", Name = "GetProducts")]
-    public async Task<ActionResult<List<Product>>> GetProducts()
+    public async Task<ActionResult<List<Supplier>>> GetProducts()
     {
         _logger.LogInformation("Logging GetProducts ");
         var results = await _mediator.Send(new GetProductQuery());
