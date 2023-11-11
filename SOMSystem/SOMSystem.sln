@@ -43,6 +43,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOM.SupplierService.Domain"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOM.SupplierService.Application", "SupplierService\SOM.SupplierService.Application\SOM.SupplierService.Application.csproj", "{D92E1A68-3079-4212-B482-79103ABD4557}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4C6EB3B0-2172-47FD-9878-1D4802303EC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,10 @@ Global
 		{D92E1A68-3079-4212-B482-79103ABD4557}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D92E1A68-3079-4212-B482-79103ABD4557}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D92E1A68-3079-4212-B482-79103ABD4557}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C6EB3B0-2172-47FD-9878-1D4802303EC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C6EB3B0-2172-47FD-9878-1D4802303EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C6EB3B0-2172-47FD-9878-1D4802303EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C6EB3B0-2172-47FD-9878-1D4802303EC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
