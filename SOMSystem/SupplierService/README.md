@@ -12,6 +12,3 @@ In **Package Manager console**
 ```
 > update-database
 ```
-
-
-
