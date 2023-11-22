@@ -45,6 +45,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOM.SupplierService.Applica
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4C6EB3B0-2172-47FD-9878-1D4802303EC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOM.ApiGateway", "ApiGateway\SOM.ApiGateway\SOM.ApiGateway.csproj", "{840F9EE8-D5EB-4530-A578-CCB570ED7620}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,10 @@ Global
 		{4C6EB3B0-2172-47FD-9878-1D4802303EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C6EB3B0-2172-47FD-9878-1D4802303EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C6EB3B0-2172-47FD-9878-1D4802303EC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{840F9EE8-D5EB-4530-A578-CCB570ED7620}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{840F9EE8-D5EB-4530-A578-CCB570ED7620}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{840F9EE8-D5EB-4530-A578-CCB570ED7620}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{840F9EE8-D5EB-4530-A578-CCB570ED7620}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -105,6 +111,7 @@ Global
 		{BAE12DE6-2EE7-404B-AA67-710DB5E6F522} = {F39FFCEF-14B5-4343-A99E-63D3EB8184AF}
 		{030203F1-68D7-4007-82CE-A23DF8084EE6} = {F39FFCEF-14B5-4343-A99E-63D3EB8184AF}
 		{D92E1A68-3079-4212-B482-79103ABD4557} = {F39FFCEF-14B5-4343-A99E-63D3EB8184AF}
+		{840F9EE8-D5EB-4530-A578-CCB570ED7620} = {B5613946-54E7-4B04-875C-7BA7E98148FE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4037BE29-B7EB-4A62-B28D-A3180F82F078}
