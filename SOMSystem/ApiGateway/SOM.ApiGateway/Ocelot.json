@@ -35,6 +35,18 @@
       ],
       "UpstreamPathTemplate": "/suppliers/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/suppliers",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5020
+        }
+      ],
+      "UpstreamPathTemplate": "/suppliers",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
     }
   ]
 }
