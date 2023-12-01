@@ -31,5 +31,12 @@ public class ProductsController : ApiControllerBase
 
         return Ok(result);
     }
+
+    [HttpGet("{id}", Name = "GetProduct")]
+    public async Task<ActionResult<List<Product>>> GetProduct(int id)
+    {
+
+        return Ok();
+    }
 }
 
