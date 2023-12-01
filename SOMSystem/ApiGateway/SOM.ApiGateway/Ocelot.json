@@ -53,7 +53,7 @@
   ],
   "Aggregates": [
     {
-      "UpstreamPathTemplate": "/",
+      "UpstreamPathTemplate": "/combinedSuppliersWithCustomers",
       "RouteKeys": [
         "suppliers",
         "products"
