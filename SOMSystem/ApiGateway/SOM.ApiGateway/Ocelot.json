@@ -22,7 +22,8 @@
         }
       ],
       "UpstreamPathTemplate": "/products",
-      "UpstreamHttpMethod": [ "GET", "POST" ]
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "Key": "products"
     },
     {
       "DownstreamPathTemplate": "/api/suppliers/{everything}",
@@ -46,7 +47,17 @@
         }
       ],
       "UpstreamPathTemplate": "/suppliers",
-      "UpstreamHttpMethod": [ "GET", "POST" ]
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "Key": "suppliers"
+    }
+  ],
+  "Aggregates": [
+    {
+      "UpstreamPathTemplate": "/combinedSuppliersWithCustomers",
+      "RouteKeys": [
+        "suppliers",
+        "products"
+      ]
     }
   ]
 }
