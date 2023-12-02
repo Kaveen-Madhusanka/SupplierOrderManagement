@@ -52,12 +52,20 @@
     }
   ],
   "Aggregates": [
-    {
-      "UpstreamPathTemplate": "/combinedSuppliersWithCustomers",
+    { //custom aggregator
+      "UpstreamPathTemplate": "/combinedSuppliersWithProducts",
+      "RouteKeys": [
+        "suppliers",
+        "products"
+      ],
+      "Aggregator": "SuppliersAndProductsAggregator"
+    },
+    { // just union aggregator
+      "UpstreamPathTemplate": "/combinedSuppliersAndProducts",
       "RouteKeys": [
         "suppliers",
         "products"
       ]
-    }
+    }    
   ]
 }
