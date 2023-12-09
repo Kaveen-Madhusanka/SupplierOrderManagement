@@ -11,6 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.SupplierService", "3.Supp
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.InventoryService", "4.InventoryService", "{2F589B6E-A45B-461D-95B5-87A4E132108B}"
+	ProjectSection(SolutionItems) = preProject
+		InventoryService\README.md = InventoryService\README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "8.Shared", "8.Shared", "{521BDE01-23AB-4E09-B589-2AEBF08935FA}"
 EndProject
