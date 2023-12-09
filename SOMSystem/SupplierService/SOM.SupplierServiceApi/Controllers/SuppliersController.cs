@@ -1,9 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using SOM.SupplierService.Application.Products.Commands;
-using SOM.SupplierService.Application.Products.Queries;
-using SOM.SupplierService.Domain.Product;
 using SOM.Shared.Entities;
+using SOM.SupplierService.Application.Suppler.Commands;
+using SOM.SupplierService.Application.Suppler.Queries;
+using SOM.SupplierService.Domain.Supplier;
 
 namespace SOM.SupplierServiceApi.Controllers;
 
@@ -16,16 +16,16 @@ public class SuppliersController : ApiControllerBase
         _logger = logger;
     }
 
-    [HttpGet("", Name = "GetProducts")]
-    public async Task<ActionResult<List<Supplier>>> GetProducts()
+    [HttpGet("", Name = "GetSuppliers")]
+    public async Task<ActionResult<List<Supplier>>> GetSupplier()
     {
-        _logger.LogInformation("Logging GetProducts ");
-        var results = await _mediator.Send(new GetProductQuery());
+        _logger.LogInformation("Logging Get Suppliers ");
+        var results = await _mediator.Send(new GetSupplierQuery());
         return Ok(results);
     }
 
-    [HttpPost("", Name = "CreateProduct")]
-    public async Task<ActionResult<int>> CreateProduct(CreateProductCommand command)
+    [HttpPost("", Name = "CreateSupplier")]
+    public async Task<ActionResult<int>> CreateSupplier(CreateSupplierCommand command)
     {
         var result = await _mediator.Send(command);
 

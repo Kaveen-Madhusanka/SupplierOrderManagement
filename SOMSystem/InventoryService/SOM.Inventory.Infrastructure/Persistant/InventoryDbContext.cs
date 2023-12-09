@@ -1,19 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SOM.SupplierService.Application.Common.Interface;
+using SOM.Inventory.Application.Common.Interface;
 using SOM.Shared.Entities;
 using System.Reflection;
-using SOM.SupplierService.Domain.Supplier;
 
-namespace SOM.SupplierService.Infrastructure.Persistant
+namespace SOM.Inventory.Infrastructure.Persistant
 {
-    public class SupplierDbContext : DbContext, ISupplierDbContext
+    public class InventoryDbContext : DbContext, IInventoryDbContext
     {
-        public SupplierDbContext(DbContextOptions<SupplierDbContext> options) : base(options)
+        public InventoryDbContext(DbContextOptions<InventoryDbContext> options) : base(options)
         {
 
         }
-
-        public DbSet<Supplier> Suppliers { get; set; }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())
         {
