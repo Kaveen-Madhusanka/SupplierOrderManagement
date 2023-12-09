@@ -20,6 +20,6 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore SOMSystem/InventoryService/SOM.InventoryServiceApi/SOM.InventoryServiceApi.csproj
+      run: dotnet restore SOMSystem/InventoryService/SOM.InventoryServiceApi/SOM.InventoryApi.csproj
     - name: Build
-      run: dotnet build SOMSystem/InventoryService/SOM.InventoryServiceApi/SOM.InventoryServiceApi.csproj --no-restore
+      run: dotnet build SOMSystem/InventoryService/SOM.InventoryServiceApi/SOM.InventoryApi.csproj --no-restore
