@@ -6,9 +6,12 @@ services:
     build:
       context: .
       dockerfile: ProductService/SOM.ProductServiceApi/Dockerfile
-
-  som.supplierserviceapi:
-    image: ${DOCKER_REGISTRY-}somsupplierserviceapi
-    build:
-      context: .
-      dockerfile: SupplierService/SOM.SupplierServiceApi/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+    ports:
+      - "5011:80"
+      - "5010:443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
