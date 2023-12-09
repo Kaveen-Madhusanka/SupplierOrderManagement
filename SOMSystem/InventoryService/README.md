@@ -1,5 +1,6 @@
 ## SOM.InventoryApi
 
+
 ### Add new migration 
 In **Package Manager console**
 ```
