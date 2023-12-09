@@ -2,7 +2,7 @@
 
 using SOM.Shared.Entities;
 
-namespace SOM.SupplierService.Domain.Product
+namespace SOM.SupplierService.Domain.Supplier
 {
     public class Supplier : AuditableEntity
     {

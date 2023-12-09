@@ -1,11 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using SOM.SupplierService.Domain.Product;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SOM.SupplierService.Domain.Supplier;
 
 namespace SOM.SupplierService.Infrastructure.Persistant.Configuration
 {

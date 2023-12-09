@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SOM.SupplierService.Domain.Product;
 using SOM.Shared.Interfaces;
+using SOM.SupplierService.Domain.Supplier;
 
 namespace SOM.SupplierService.Application.Common.Interface
 {

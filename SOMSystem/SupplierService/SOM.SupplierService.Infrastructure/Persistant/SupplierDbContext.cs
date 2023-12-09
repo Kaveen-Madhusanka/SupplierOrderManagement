@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SOM.SupplierService.Application.Common.Interface;
-using SOM.SupplierService.Domain.Product;
 using SOM.Shared.Entities;
 using System.Reflection;
+using SOM.SupplierService.Domain.Supplier;
 
 namespace SOM.SupplierService.Infrastructure.Persistant
 {
