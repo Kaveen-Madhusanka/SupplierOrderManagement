@@ -1,8 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using SOM.Shared.Entities;
-using SOM.SupplierService.Application.Suppler.Commands;
-using SOM.SupplierService.Application.Suppler.Queries;
+using SOM.SupplierService.Application.Supplier.Commands;
+using SOM.SupplierService.Application.Supplier.Queries;
 using SOM.SupplierService.Domain.Supplier;
 
 namespace SOM.SupplierServiceApi.Controllers;

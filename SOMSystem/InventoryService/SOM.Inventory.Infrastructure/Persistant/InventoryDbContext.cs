@@ -2,6 +2,10 @@
 using SOM.Inventory.Application.Common.Interface;
 using SOM.Shared.Entities;
 using System.Reflection;
+using SOM.Inventory.Domain.Inventory;
+using SOM.Inventory.Domain.Product;
+using SOM.Inventory.Domain.Supplier;
+using SOM.Inventory.Domain.Transaction;
 
 namespace SOM.Inventory.Infrastructure.Persistant
 {
@@ -11,6 +15,12 @@ namespace SOM.Inventory.Infrastructure.Persistant
         {
 
         }
+        
+        public DbSet<SupplierInfo> Suppliers { get; set; }
+        public DbSet<ProductInfo> Products { get; set; }
+        public DbSet<TransactionType> TransactionTypes { get; set; }
+        public DbSet<InventoryHolding> InventoryHoldings { get; set; }
+        public DbSet<InventoryTransaction> InventoryTransactions { get; set; }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())
         {

@@ -9,8 +9,11 @@ namespace SOM.SupplierService.Infrastructure.Persistant.Configuration
         public void Configure(EntityTypeBuilder<Supplier> builder)
         {
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Name).IsRequired().HasMaxLength(100);
-            builder.Property(x => x.Address).IsRequired().HasMaxLength(255);
+            builder.Property(x => x.SupplierName).IsRequired().HasMaxLength(500);
+            builder.Property(x => x.PostalPostalCode).IsRequired().HasMaxLength(255);
+            builder.Property(x => x.PostalAddressLine1).IsRequired().HasMaxLength(500);
+            builder.Property(x => x.PhoneNumber).IsRequired().HasMaxLength(100);
+            
         }
     }
 }

@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Products\Commands\" />
+    <Folder Include="Supplier\Commands\" />
   </ItemGroup>
 
   <ItemGroup>

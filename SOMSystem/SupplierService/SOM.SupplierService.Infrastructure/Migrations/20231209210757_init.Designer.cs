@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SOM.SupplierService.Infrastructure.Persistant;
 
@@ -11,9 +12,11 @@ using SOM.SupplierService.Infrastructure.Persistant;
 namespace SOM.SupplierService.Infrastructure.Migrations
 {
     [DbContext(typeof(SupplierDbContext))]
-    partial class SupplierDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231209210757_init")]
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

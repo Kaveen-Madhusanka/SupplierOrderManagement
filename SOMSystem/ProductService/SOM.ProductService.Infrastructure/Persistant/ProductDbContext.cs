@@ -1,6 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SOM.ProductService.Application.Common.Interface;
+using SOM.ProductService.Domain.Color;
+using SOM.ProductService.Domain.PackageType;
 using SOM.ProductService.Domain.Product;
+using SOM.ProductService.Domain.Supplier;
 using SOM.Shared.Entities;
 using System.Reflection;
 
@@ -14,7 +17,12 @@ namespace SOM.ProductService.Infrastructure.Persistant
         }
 
         public DbSet<Product> Products { get; set; }
-        public DbSet<ProductCategory> ProductCategories { get; set; }
+        public DbSet<ProductGroup> ProductGroups { get; set; }
+        public DbSet<ProductProductGroupMapping> ProductProductGroupMappings { get; set; }
+        public DbSet<Color> Colors { get; set; }
+        public DbSet<PackageType> PackageTypes { get; set; }
+        public DbSet<SupplierInfo> SupplierInfos { get; set; }
+        
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())
         {

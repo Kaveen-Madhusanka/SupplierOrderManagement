@@ -4,7 +4,7 @@
 ### Add new migration 
 In **Package Manager console**
 ```
-> update-database
+> add-migration 'init'
 
 ```
 

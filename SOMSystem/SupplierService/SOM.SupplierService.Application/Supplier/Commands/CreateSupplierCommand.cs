@@ -1,10 +1,9 @@
 ﻿using MediatR;
 using SOM.SupplierService.Application.Common.Interface;
-using SOM.SupplierService.Domain.Supplier;
 
-namespace SOM.SupplierService.Application.Suppler.Commands
+namespace SOM.SupplierService.Application.Supplier.Commands
 {
-    public record CreateSupplierCommand(Supplier Supplier) : IRequest<int>;
+    public record CreateSupplierCommand(Domain.Supplier.Supplier Supplier) : IRequest<int>;
 
     public class CreateSupplierCommandHandler : IRequestHandler<CreateSupplierCommand, int>
     {

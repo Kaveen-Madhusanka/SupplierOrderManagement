@@ -6,6 +6,7 @@ namespace SOM.SupplierService.Application.Common.Interface
 {
     public interface ISupplierDbContext: IDbContextBase
     {
-        DbSet<Supplier> Suppliers { get; set; }
+        DbSet<Domain.Supplier.Supplier> Suppliers { get; set; }
+        public DbSet<SupplierCategory> SupplierCategories { get; set; }
     }
 }
