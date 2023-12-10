@@ -16,8 +16,8 @@ namespace SOM.Inventory.Infrastructure.Persistant
 
         }
         
-        public DbSet<SupplierInfo> Suppliers { get; set; }
-        public DbSet<ProductInfo> Products { get; set; }
+        public DbSet<SupplierInfo> SupplierInfos { get; set; }
+        public DbSet<ProductInfo> ProductInfos { get; set; }
         public DbSet<TransactionType> TransactionTypes { get; set; }
         public DbSet<InventoryHolding> InventoryHoldings { get; set; }
         public DbSet<InventoryTransaction> InventoryTransactions { get; set; }

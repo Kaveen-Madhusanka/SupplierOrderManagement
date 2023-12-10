@@ -1,6 +1,8 @@
-﻿namespace SOM.ProductService.Domain.Supplier;
+﻿using SOM.Shared.Entities;
 
-public class SupplierInfo
+namespace SOM.ProductService.Domain.Supplier;
+
+public class SupplierInfo: AuditableEntity
 {
     public SupplierInfo()
     {

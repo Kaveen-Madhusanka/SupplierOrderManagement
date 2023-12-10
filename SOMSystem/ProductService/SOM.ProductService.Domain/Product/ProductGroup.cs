@@ -1,6 +1,8 @@
-﻿namespace SOM.ProductService.Domain.Product;
+﻿using SOM.Shared.Entities;
 
-public class ProductGroup
+namespace SOM.ProductService.Domain.Product;
+
+public class ProductGroup: AuditableEntity
 {
     public ProductGroup()
     {

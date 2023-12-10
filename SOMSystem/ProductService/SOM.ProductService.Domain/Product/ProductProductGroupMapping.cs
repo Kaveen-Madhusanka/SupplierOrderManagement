@@ -1,6 +1,8 @@
-﻿namespace SOM.ProductService.Domain.Product;
+﻿using SOM.Shared.Entities;
 
-public class ProductProductGroupMapping
+namespace SOM.ProductService.Domain.Product;
+
+public class ProductProductGroupMapping : AuditableEntity
 {
     public int Id { get; set; }
     public int ProductId { get; set; }
