@@ -1,6 +1,8 @@
-﻿namespace SOM.ProductService.Domain.Color;
+﻿using SOM.Shared.Entities;
 
-public class Color
+namespace SOM.ProductService.Domain.Color;
+
+public class Color: AuditableEntity
 {
 
     public Color()

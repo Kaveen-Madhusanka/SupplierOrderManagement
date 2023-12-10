@@ -1,6 +1,8 @@
-﻿namespace SOM.ProductService.Domain.PackageType;
+﻿using SOM.Shared.Entities;
 
-public class PackageType
+namespace SOM.ProductService.Domain.PackageType;
+
+public class PackageType: AuditableEntity
 {
     public PackageType()
     {
