@@ -14,6 +14,7 @@ namespace SOM.SupplierService.Infrastructure.Persistant
         }
 
         public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<SupplierCategory> SupplierCategories { get; set; }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())
         {
