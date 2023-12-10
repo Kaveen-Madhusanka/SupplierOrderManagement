@@ -10,4 +10,8 @@
     <ProjectReference Include="..\..\Shared\SOM.Shared\SOM.Shared.csproj" />
   </ItemGroup>
 
+
+
+
+
 </Project>
