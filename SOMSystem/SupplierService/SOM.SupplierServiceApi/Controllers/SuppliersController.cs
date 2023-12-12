@@ -28,7 +28,6 @@ public class SuppliersController : ApiControllerBase
     public async Task<ActionResult<int>> CreateSupplier(CreateSupplierCommand command)
     {
         var result = await _mediator.Send(command);
-
         return Ok(result);
     }
 }
