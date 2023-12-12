@@ -2,6 +2,7 @@ using Serilog;
 using SOM.SupplierService.Application;
 using SOM.SupplierService.Infrastructure;
 using SOM.Shared.Middlewares;
+using SOM.SupplierService.Application.Mappers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,8 @@ builder.Host.UseSerilog((ctx, lc) => lc
     .WriteTo.Console()
     .WriteTo.Seq("http://localhost:5341"));
 
+
+builder.Services.AddAutoMapper(typeof(SupplierMapperProfile));
 
 // Add services to the container.
 builder.Services.AddApplication(builder.Configuration);
