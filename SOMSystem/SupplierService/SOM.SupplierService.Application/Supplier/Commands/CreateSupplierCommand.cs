@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using SOM.SupplierService.Application.Common.Interface;
+using SOM.SupplierService.Application.Supplier.Notifications;
 
 namespace SOM.SupplierService.Application.Supplier.Commands
 {
@@ -8,11 +9,13 @@ namespace SOM.SupplierService.Application.Supplier.Commands
     {
         private readonly ISupplierDbContext _appDbContext;
         private readonly IMapper _mapper;
+        private readonly IMediator _mediator;
 
-        public CreateSupplierCommandHandler(ISupplierDbContext appDbContext, IMapper mapper)
+        public CreateSupplierCommandHandler(ISupplierDbContext appDbContext, IMapper mapper, IMediator mediator)
         {
             _appDbContext = appDbContext;
             _mapper = mapper;
+            _mediator = mediator;
         }
 
         public async Task<int> Handle(CreateSupplierCommand request, CancellationToken cancellationToken)
@@ -20,6 +23,9 @@ namespace SOM.SupplierService.Application.Supplier.Commands
             var supplier = _mapper.Map<Domain.Supplier.Supplier>(request);   
             await _appDbContext.Suppliers.AddAsync(supplier, cancellationToken);
             await _appDbContext.SaveChangesAsync(cancellationToken);
+
+            await _mediator.Publish(_mapper.Map<SupplierCreated>(supplier), cancellationToken);
+
             return supplier.Id;
         }
     }

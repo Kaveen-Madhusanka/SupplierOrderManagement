@@ -1,3 +1,4 @@
+using RabbitMQ;
 using Serilog;
 using SOM.SupplierService.Application;
 using SOM.SupplierService.Infrastructure;
@@ -26,6 +27,8 @@ builder.Services.AddHttpsRedirection(options =>
 {
     options.HttpsPort = 5020;
 });
+
+builder.Services.AddRabbitMq();
 
 var app = builder.Build();
 

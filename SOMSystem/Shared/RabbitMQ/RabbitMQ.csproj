@@ -7,11 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
+    <ProjectReference Include="..\SOM.Shared\SOM.Shared.csproj" />
   </ItemGroup>
 
+
   <ItemGroup>
-    <ProjectReference Include="..\SOM.Shared\SOM.Shared.csproj" />
+    <PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
   </ItemGroup>
 
 </Project>
