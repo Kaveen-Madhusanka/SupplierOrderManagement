@@ -41,7 +41,7 @@ namespace RabbitMQ
             string QueueName = string.Empty;
             switch (publisherName)
             {
-                case "Prodct":
+                case "supplier-service":
                     QueueName = "amqp://guest:guest@localhost:5672";// this needs read fromm appsettings
                     break;
                 default:

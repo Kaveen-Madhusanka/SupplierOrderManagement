@@ -6,6 +6,7 @@ public class SupplierCreatedSendEmailHandler: INotificationHandler<SupplierCreat
 {
     public Task Handle(SupplierCreated notification, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        Console.WriteLine("send email notification");
+        return Task.CompletedTask;
     }
 }
