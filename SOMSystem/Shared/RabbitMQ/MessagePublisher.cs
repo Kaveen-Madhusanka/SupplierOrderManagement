@@ -1,11 +1,7 @@
-﻿using Newtonsoft.Json;
-using RabbitMQ.Client;
-using SOM.Shared.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using SOM.Shared.Interfaces;
 using System.Text;
-using System.Threading.Tasks;
+using System.Text.Json;
+using RabbitMQ.Client;
 
 namespace RabbitMQ
 {
@@ -14,9 +10,11 @@ namespace RabbitMQ
 
         public bool Publish<T>(string publisherName, string exchangeName, string queueName, string routingKey, T message)
         {
-            ConnectionFactory factory = new();
-            factory.Uri = new Uri(MapQueueUri(publisherName));
-            factory.ClientProvidedName = publisherName;
+            ConnectionFactory factory = new()
+            {
+                Uri = new Uri(MapQueueUri(publisherName)),
+                ClientProvidedName = publisherName
+            };
 
             IConnection con = factory.CreateConnection();
 
@@ -27,7 +25,7 @@ namespace RabbitMQ
             channel.QueueBind(queueName, exchangeName, routingKey, null);
             channel.BasicQos(0, 1, false);
 
-            byte[] messageBodyBytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(message));
+            byte[] messageBodyBytes = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(message));
             channel.BasicPublish(exchangeName, routingKey, null, messageBodyBytes);
 
             Thread.Sleep(1000);
@@ -43,7 +41,7 @@ namespace RabbitMQ
             string QueueName = string.Empty;
             switch (publisherName)
             {
-                case "Prodct":
+                case "supplier-service":
                     QueueName = "amqp://guest:guest@localhost:5672";// this needs read fromm appsettings
                     break;
                 default:

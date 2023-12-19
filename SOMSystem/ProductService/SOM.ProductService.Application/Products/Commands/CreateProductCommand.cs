@@ -20,16 +20,9 @@ namespace SOM.ProductService.Application.Products.Commands
         }
         public async Task<int> Handle(CreateProductCommand request, CancellationToken cancellationToken)
         {
-            try
-            {
-                await _appDbContext.Products.AddAsync(request.Product, cancellationToken);
-                await _appDbContext.SaveChangesAsync(cancellationToken);
-                return request.Product.Id;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            await _appDbContext.Products.AddAsync(request.Product, cancellationToken);
+            await _appDbContext.SaveChangesAsync(cancellationToken);
+            return request.Product.Id;
         }
     }
 }

@@ -16,6 +16,7 @@ public class SuppliersController : ApiControllerBase
         _logger = logger;
     }
 
+    [ProducesResponseType(StatusCodes.Status200OK)]
     [HttpGet("", Name = "GetSuppliers")]
     public async Task<ActionResult<List<Supplier>>> GetSupplier()
     {
@@ -24,11 +25,14 @@ public class SuppliersController : ApiControllerBase
         return Ok(results);
     }
 
+    [ProducesResponseType(StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     [HttpPost("", Name = "CreateSupplier")]
-    public async Task<ActionResult<int>> CreateSupplier(CreateSupplierCommand command)
+    public async Task<IResult> CreateSupplier(CreateSupplierCommand command)
     {
         var result = await _mediator.Send(command);
-        return Ok(result);
+        return Results.Created(Url.Action(nameof(GetSupplier), new { id = result }) ?? $"/{result}", result);
     }
 }
 
