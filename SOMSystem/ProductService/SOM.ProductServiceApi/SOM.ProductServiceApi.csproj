@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\BackgroundTasks\BackgroundTasks.csproj" />
+    <ProjectReference Include="..\..\Shared\RabbitMQ\RabbitMQ.csproj" />
     <ProjectReference Include="..\..\Shared\SOM.Shared\SOM.Shared.csproj" />
     <ProjectReference Include="..\SOM.ProductService.Infrastructure\SOM.ProductService.Infrastructure.csproj" />
   </ItemGroup>
