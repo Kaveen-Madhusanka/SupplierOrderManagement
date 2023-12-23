@@ -1,3 +1,4 @@
+using BackgroundTasks;
 using Serilog;
 using SOM.ProductService.Application;
 using SOM.ProductService.Infrastructure;
@@ -13,6 +14,7 @@ builder.Host.UseSerilog((ctx, lc) => lc
 // Add services to the container.
 builder.Services.AddApplication(builder.Configuration);
 builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddHostedService<ConsumerBackgroundService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
