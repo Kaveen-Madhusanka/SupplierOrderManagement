@@ -9,6 +9,7 @@ public static class DependencyInjection
     public static IServiceCollection AddRabbitMq(this IServiceCollection services)
     {
         services.AddScoped<IMessagePublisher, MessagePublisher>();
+        services.AddSingleton<IMessageConsumer, MessageConsumer>();
         return services;
     }
 }

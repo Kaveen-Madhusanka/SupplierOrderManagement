@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using SOM.Shared.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,20 +12,31 @@ namespace BackgroundTasks
     public class ConsumerBackgroundService : BackgroundService
     {
         private readonly ILogger<ConsumerBackgroundService> _logger;
-        public ConsumerBackgroundService(ILogger<ConsumerBackgroundService> logger)
+        private readonly IMessageConsumer _messageConsumer;
+
+        public ConsumerBackgroundService(ILogger<ConsumerBackgroundService> logger, IMessageConsumer messageConsumer)
         {
             _logger = logger;
+            _messageConsumer = messageConsumer;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
+            var publisherName = "supplier-service";
+            string exchangeName = "DemoExchange";
+            string routingKey = "demo-routing-key";
+            string queueName = "DemoQueue";
+            //var exchangeName = "som-exchanger";
+            //var queueName = "som-queue";
+            //var routingKey = "supplier-route-key";
+
             while (!stoppingToken.IsCancellationRequested)
             {
                 _logger.LogInformation("BackgroundService is running.");
-
+                _messageConsumer.Receive(publisherName,exchangeName,queueName,routingKey);
                
 
-                await Task.Delay(TimeSpan.FromSeconds(10), stoppingToken); // Delay for 10 seconds
+                await Task.Delay(TimeSpan.FromSeconds(2), stoppingToken); // Delay for 10 seconds
             }
         }
     }
