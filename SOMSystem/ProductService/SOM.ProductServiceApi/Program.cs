@@ -12,13 +12,11 @@ builder.Host.UseSerilog((ctx, lc) => lc
     .WriteTo.Seq("http://localhost:5341"));
 
 
-// Add services to the container.
 builder.Services.AddApplication(builder.Configuration);
 builder.Services.AddInfrastructure(builder.Configuration);
-builder.Services.AddHostedService<ConsumerBackgroundService>();
+builder.Services.AddHostedService<ProductConsumer>();
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpsRedirection(options =>

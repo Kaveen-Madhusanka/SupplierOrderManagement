@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace BackgroundTasks
 {
-    public class ConsumerBackgroundService : BackgroundService
+    public class ProductConsumer : BackgroundService
     {
-        private readonly ILogger<ConsumerBackgroundService> _logger;
+        private readonly ILogger<ProductConsumer> _logger;
         private readonly IMessageConsumer _messageConsumer;
 
-        public ConsumerBackgroundService(ILogger<ConsumerBackgroundService> logger, IMessageConsumer messageConsumer)
+        public ProductConsumer(ILogger<ProductConsumer> logger, IMessageConsumer messageConsumer)
         {
             _logger = logger;
             _messageConsumer = messageConsumer;
