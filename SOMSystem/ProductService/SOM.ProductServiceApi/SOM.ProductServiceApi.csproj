@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.13">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -25,9 +26,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\BackgroundTasks\BackgroundTasks.csproj" />
     <ProjectReference Include="..\..\Shared\RabbitMQ\RabbitMQ.csproj" />
     <ProjectReference Include="..\..\Shared\SOM.Shared\SOM.Shared.csproj" />
+    <ProjectReference Include="..\..\SupplierService\SOM.SupplierService.Application\SOM.SupplierService.Application.csproj" />
+    <ProjectReference Include="..\SOM.ProductService.BackgroundTasks\SOM.ProductService.BackgroundTasks.csproj" />
     <ProjectReference Include="..\SOM.ProductService.Infrastructure\SOM.ProductService.Infrastructure.csproj" />
   </ItemGroup>
 

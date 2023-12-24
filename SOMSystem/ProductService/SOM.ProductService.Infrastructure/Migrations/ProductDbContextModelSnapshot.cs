@@ -240,10 +240,7 @@ namespace SOM.ProductService.Infrastructure.Migrations
             modelBuilder.Entity("SOM.ProductService.Domain.Supplier.SupplierInfo", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime?>("Created")
                         .HasColumnType("datetime2");

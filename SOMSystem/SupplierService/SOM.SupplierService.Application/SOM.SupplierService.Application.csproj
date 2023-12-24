@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Shared\RabbitMQ\RabbitMQ.csproj" />
     <ProjectReference Include="..\SOM.SupplierService.Domain\SOM.SupplierService.Domain.csproj" />
   </ItemGroup>
 
