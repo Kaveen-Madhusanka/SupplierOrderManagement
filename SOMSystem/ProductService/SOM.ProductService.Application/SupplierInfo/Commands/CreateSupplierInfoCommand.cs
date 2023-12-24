@@ -18,8 +18,7 @@ public class CreateSupplierInfoCommandHandler : IRequestHandler<CreateSupplierIn
     private readonly IProductDbContext _appDbContext;
     private readonly IMapper _mapper;
         
-    public CreateSupplierInfoCommandHandler(IProductDbContext appDbContext,
-        IMapper mapper)
+    public CreateSupplierInfoCommandHandler(IProductDbContext appDbContext, IMapper mapper)
     {
         _appDbContext= appDbContext;
         _mapper = mapper;

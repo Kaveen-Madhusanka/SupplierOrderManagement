@@ -10,6 +10,7 @@ public class ProductMapperProfile : Profile
     public ProductMapperProfile()
     {
         CreateMap<CreateProductCommand, Product>();
-        CreateMap<CreateSupplierInfoCommand, Domain.Supplier.SupplierInfo>();
+        CreateMap<CreateSupplierInfoCommand, Domain.Supplier.SupplierInfo>()
+            .ForMember(dest => dest.SupplierName, opt => opt.MapFrom(src => src.Name));
     }
 }

@@ -14,12 +14,10 @@ builder.Host.UseSerilog((ctx, lc) => lc
 
 builder.Services.AddAutoMapper(typeof(SupplierMapperProfile));
 
-// Add services to the container.
 builder.Services.AddApplication(builder.Configuration);
 builder.Services.AddInfrastructure(builder.Configuration);
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -28,11 +26,11 @@ builder.Services.AddHttpsRedirection(options =>
     options.HttpsPort = 5020;
 });
 
+// TODO: send rabbit mq settings inside 
 builder.Services.AddRabbitMq();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

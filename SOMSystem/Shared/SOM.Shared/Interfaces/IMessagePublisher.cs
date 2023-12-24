@@ -8,5 +8,5 @@ namespace SOM.Shared.Interfaces;
 
 public interface IMessagePublisher
 {
-    bool Publish<T>(string publisherName, string exchangeName, string queueName, string routingKey, T message);
+    void Publish<TEventEnum, TMessage>(TEventEnum eventEnum, TMessage message);
 }

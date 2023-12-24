@@ -8,10 +8,13 @@
 
     <ItemGroup>
       <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+      <PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\Shared\RabbitMQ\RabbitMQ.csproj" />
       <ProjectReference Include="..\..\Shared\SOM.Shared\SOM.Shared.csproj" />
+      <ProjectReference Include="..\SOM.ProductService.Application\SOM.ProductService.Application.csproj" />
     </ItemGroup>
 
 </Project>

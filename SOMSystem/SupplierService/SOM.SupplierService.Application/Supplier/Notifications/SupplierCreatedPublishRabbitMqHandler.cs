@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using RabbitMQ.Enums;
 using SOM.Shared.Interfaces;
 
 namespace SOM.SupplierService.Application.Supplier.Notifications;
@@ -14,12 +15,7 @@ public class SupplierCreatedPublishRabbitMqHandler: INotificationHandler<Supplie
     
     public Task Handle(SupplierCreated supplierCreated, CancellationToken cancellationToken)
     {
-        var publisherName = "supplier-service";
-        var exchangeName = "som-exchanger";
-        var queueName = "som-queue";
-        var routingKey = "supplier-route-key";
-
-        _messagePublisher.Publish(publisherName, exchangeName, queueName, routingKey, supplierCreated);
+        _messagePublisher.Publish(SupplierEventEnum.SupplierCreated, supplierCreated);
         return Task.CompletedTask;
     }
 }
