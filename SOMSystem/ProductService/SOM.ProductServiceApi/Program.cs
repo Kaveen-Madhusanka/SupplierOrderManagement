@@ -2,6 +2,7 @@ using RabbitMQ;
 using BackgroundTasks;
 using Serilog;
 using SOM.ProductService.Application;
+using SOM.ProductService.Application.Mappers;
 using SOM.ProductService.Infrastructure;
 using SOM.Shared.Middlewares;
 
@@ -14,6 +15,7 @@ builder.Host.UseSerilog((ctx, lc) => lc
 
 builder.Services.AddApplication(builder.Configuration);
 builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddAutoMapper(typeof(ProductMapperProfile));
 builder.Services.AddHostedService<ProductConsumer>();
 
 builder.Services.AddControllers();

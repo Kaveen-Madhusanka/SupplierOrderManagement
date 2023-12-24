@@ -14,6 +14,6 @@ namespace SOM.ProductService.Application.Common.Interface
         public DbSet<ProductProductGroupMapping> ProductProductGroupMappings { get; set; }
         public DbSet<Color> Colors { get; set; }
         public DbSet<PackageType> PackageTypes { get; set; }
-        public DbSet<SupplierInfo> SupplierInfos { get; set; }
+        public DbSet<Domain.Supplier.SupplierInfo> SupplierInfos { get; set; }
     }
 }
