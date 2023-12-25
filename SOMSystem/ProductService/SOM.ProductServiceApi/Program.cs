@@ -19,6 +19,8 @@ builder.Services.Configure<EventBusOptions>(builder.Configuration.GetSection("Ev
 builder.Services.AddApplication(builder.Configuration);
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddAutoMapper(typeof(ProductMapperProfile));
+
+builder.Services.AddScoped<ConsumerBase, ProductConsumer>();
 builder.Services.AddHostedService<ProductConsumer>();
 
 builder.Services.AddControllers();
