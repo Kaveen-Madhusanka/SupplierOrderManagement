@@ -11,7 +11,7 @@ using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace BackgroundTasks;
 
-public class ProductConsumer :  BackgroundService
+public class ProductConsumer : IHostedService, IDisposable
 {
     protected string QueueName => "productServiceQueue_dev_v1";
 
@@ -23,7 +23,7 @@ public class ProductConsumer :  BackgroundService
     };
 
     private IModel _channel;
-    
+
     private const string ExchangeName = "som-exchange";
 
     private readonly IServiceScopeFactory _serviceScopeFactory;
@@ -43,7 +43,7 @@ public class ProductConsumer :  BackgroundService
         }
     }
 
-    protected override Task ExecuteAsync(CancellationToken stoppingToken)
+    public Task StartAsync(CancellationToken cancellationToken)
     {
         var consumer = new EventingBasicConsumer(_channel);
         consumer.Received += async (model, ea) =>
@@ -53,7 +53,7 @@ public class ProductConsumer :  BackgroundService
             var routingKey = ea.RoutingKey;
             Console.WriteLine($"Received message in {QueueName} with routing key {routingKey}: {message}");
 
-            using var scope = _serviceScopeFactory.CreateScope() ;
+            using var scope = _serviceScopeFactory.CreateScope();
             var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
 
             if (routingKey == SupplierEventEnum.SupplierCreated.ToString())
@@ -63,7 +63,7 @@ public class ProductConsumer :  BackgroundService
                 {
                     Id = supplierInfo!.Id,
                     Name = supplierInfo.SupplierName
-                }, stoppingToken);
+                }, cancellationToken);
             }
         };
 
@@ -71,10 +71,15 @@ public class ProductConsumer :  BackgroundService
 
         return Task.CompletedTask;
     }
-    
-    
-    public override void Dispose()
+
+    public Task StopAsync(CancellationToken cancellationToken)
     {
         _channel.Close();
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _channel?.Dispose();
     }
 }
