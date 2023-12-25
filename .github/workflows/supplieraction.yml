@@ -3,11 +3,11 @@
 name: Supplier Service Build
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
     paths:
       - 'SOMSystem/SupplierService/**'
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
     paths:
       - 'SOMSystem/SupplierService/**'
 jobs:
