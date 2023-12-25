@@ -3,11 +3,11 @@
 name: Inventory Service Build
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
     paths:
       - 'SOMSystem/InventoryService/**'
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
     paths:
       - 'SOMSystem/InventoryService/**'
 jobs:
