@@ -7,23 +7,15 @@ namespace RabbitMQ;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddRabbitMq(this IServiceCollection services)
+    public static IServiceCollection AddRabbitMq(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddScoped<IMessagePublisher, MessagePublisher>();
         
-        
-        services
-            // other registrations omitted for brevity
-            .AddSingleton<IConnectionFactory>(serviceProvider =>
-            {
-                var uri = new Uri("amqp://guest:guest@localhost:5672");
-                return new ConnectionFactory
-                {
-                    Uri = uri
-                };
-            });
-        
-        
+        services.AddSingleton<IConnectionFactory>(serviceProvider => new ConnectionFactory
+        {
+            Uri = new Uri(configuration.GetConnectionString("EventBus"))
+        });
+
         return services;
     }
 }

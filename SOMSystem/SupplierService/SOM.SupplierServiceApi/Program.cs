@@ -26,8 +26,7 @@ builder.Services.AddHttpsRedirection(options =>
     options.HttpsPort = 5020;
 });
 
-// TODO: send rabbit mq settings inside 
-builder.Services.AddRabbitMq();
+builder.Services.AddRabbitMq(builder.Configuration);
 
 var app = builder.Build();
 
