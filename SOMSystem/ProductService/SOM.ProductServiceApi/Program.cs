@@ -1,8 +1,8 @@
 using RabbitMQ;
-using BackgroundTasks;
 using Serilog;
 using SOM.ProductService.Application;
 using SOM.ProductService.Application.Mappers;
+using SOM.ProductService.BackgroundTasks;
 using SOM.ProductService.Infrastructure;
 using SOM.Shared.Middlewares;
 using SOM.Shared.SettingOptions;

@@ -5,17 +5,16 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
-using RabbitMQ.Enums;
 using SOM.ProductService.Application.SupplierInfo.Commands;
 using SOM.ProductService.Domain.Supplier;
+using SOM.Shared.Enums;
 using SOM.Shared.SettingOptions;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 
-namespace BackgroundTasks;
+namespace SOM.ProductService.BackgroundTasks;
 
 public class ProductConsumer : IHostedService, IDisposable
 {
-
     protected List<string> BindingKeys = new()
     {
         SupplierEventEnum.SupplierCreated.ToString(),
@@ -24,8 +23,6 @@ public class ProductConsumer : IHostedService, IDisposable
     };
 
     private IModel _channel;
-
-
     private readonly IServiceScopeFactory _serviceScopeFactory;
     private readonly IOptions<EventBusOptions> _eventBusOptions;
 
