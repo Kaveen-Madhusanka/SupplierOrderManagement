@@ -1,4 +1,4 @@
-﻿namespace RabbitMQ.Enums;
+﻿namespace SOM.Shared.Enums;
 
 public enum SupplierEventEnum
 {

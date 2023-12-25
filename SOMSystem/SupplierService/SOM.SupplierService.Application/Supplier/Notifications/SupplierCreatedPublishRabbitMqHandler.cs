@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using RabbitMQ.Enums;
+using SOM.Shared.Enums;
 using SOM.Shared.Interfaces;
 
 namespace SOM.SupplierService.Application.Supplier.Notifications;
