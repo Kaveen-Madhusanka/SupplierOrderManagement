@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
@@ -60,7 +60,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOM.InventoryApi", "Invento
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ", "Shared\RabbitMQ\RabbitMQ.csproj", "{322164C2-DC88-4275-B89E-24AEA58E89D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOM.ProductService.BackgroundTasks", "ProductService\SOM.ProductService.BackgroundTasks\SOM.ProductService.BackgroundTasks.csproj", "{C04D063C-13AC-4498-8E8C-545D0021DB26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOM.ProductService.BackgroundTasks", "ProductService\SOM.ProductService.BackgroundTasks\SOM.ProductService.BackgroundTasks.csproj", "{C04D063C-13AC-4498-8E8C-545D0021DB26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
