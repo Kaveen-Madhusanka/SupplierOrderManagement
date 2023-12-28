@@ -9,19 +9,22 @@ using SOM.Shared.SettingOptions;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.AddServiceDefaults();
+
 builder.Host.UseSerilog((ctx, lc) => lc
     .WriteTo.Console()
     .WriteTo.Seq("http://localhost:5341"));
 
-builder.Services.Configure<EventBusOptions>(builder.Configuration.GetSection("EventBus"));
 
+builder.AddRabbitMqEventBus("EventBus");
 
 builder.Services.AddApplication(builder.Configuration);
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddAutoMapper(typeof(ProductMapperProfile));
 
-builder.Services.AddScoped<ConsumerBase, ProductConsumer>();
+//builder.Services.AddScoped<ConsumerBase, ProductConsumer>();
 builder.Services.AddHostedService<ProductConsumer>();
+//builder.Services.AddSingleton<IHostedService, ProductConsumer>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -31,9 +34,11 @@ builder.Services.AddHttpsRedirection(options =>
     options.HttpsPort = 5010;
 });
 
-builder.Services.AddRabbitMq(builder.Configuration);
+
 
 var app = builder.Build();
+
+app.MapDefaultEndpoints();
 
 if (app.Environment.IsDevelopment())
 {
