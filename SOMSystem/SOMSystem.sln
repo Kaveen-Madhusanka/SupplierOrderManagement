@@ -1,4 +1,3 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
@@ -61,6 +60,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ", "Shared\RabbitMQ\RabbitMQ.csproj", "{322164C2-DC88-4275-B89E-24AEA58E89D4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOM.ProductService.BackgroundTasks", "ProductService\SOM.ProductService.BackgroundTasks\SOM.ProductService.BackgroundTasks.csproj", "{C04D063C-13AC-4498-8E8C-545D0021DB26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOMSystem.AppHost", "SOMSystem.AppHost\SOMSystem.AppHost.csproj", "{2743EC16-B3D4-482C-A267-00AC050C98E1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOMSystem.ServiceDefaults", "SOMSystem.ServiceDefaults\SOMSystem.ServiceDefaults.csproj", "{612FF31C-3C7F-4A64-B172-2405BB4633C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -136,6 +139,14 @@ Global
 		{C04D063C-13AC-4498-8E8C-545D0021DB26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C04D063C-13AC-4498-8E8C-545D0021DB26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C04D063C-13AC-4498-8E8C-545D0021DB26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2743EC16-B3D4-482C-A267-00AC050C98E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2743EC16-B3D4-482C-A267-00AC050C98E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2743EC16-B3D4-482C-A267-00AC050C98E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2743EC16-B3D4-482C-A267-00AC050C98E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{612FF31C-3C7F-4A64-B172-2405BB4633C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{612FF31C-3C7F-4A64-B172-2405BB4633C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{612FF31C-3C7F-4A64-B172-2405BB4633C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{612FF31C-3C7F-4A64-B172-2405BB4633C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

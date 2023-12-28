@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\RabbitMQ\RabbitMQ.csproj" />
     <ProjectReference Include="..\..\Shared\SOM.Shared\SOM.Shared.csproj" />
+    <ProjectReference Include="..\..\SOMSystem.ServiceDefaults\SOMSystem.ServiceDefaults.csproj" />
     <ProjectReference Include="..\SOM.SupplierService.Infrastructure\SOM.SupplierService.Infrastructure.csproj" />
   </ItemGroup>
 </Project>
