@@ -45,8 +45,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOM.SupplierService.Domain"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOM.SupplierService.Application", "SupplierService\SOM.SupplierService.Application\SOM.SupplierService.Application.csproj", "{D92E1A68-3079-4212-B482-79103ABD4557}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4C6EB3B0-2172-47FD-9878-1D4802303EC4}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOM.ApiGateway", "ApiGateway\SOM.ApiGateway\SOM.ApiGateway.csproj", "{840F9EE8-D5EB-4530-A578-CCB570ED7620}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOM.Inventory.Application", "InventoryService\SOM.Inventory.Application\SOM.Inventory.Application.csproj", "{8BF97512-3D9B-4025-AE54-4DE7C7E73292}"
@@ -107,10 +105,6 @@ Global
 		{D92E1A68-3079-4212-B482-79103ABD4557}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D92E1A68-3079-4212-B482-79103ABD4557}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D92E1A68-3079-4212-B482-79103ABD4557}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C6EB3B0-2172-47FD-9878-1D4802303EC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C6EB3B0-2172-47FD-9878-1D4802303EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C6EB3B0-2172-47FD-9878-1D4802303EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C6EB3B0-2172-47FD-9878-1D4802303EC4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{840F9EE8-D5EB-4530-A578-CCB570ED7620}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{840F9EE8-D5EB-4530-A578-CCB570ED7620}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{840F9EE8-D5EB-4530-A578-CCB570ED7620}.Release|Any CPU.ActiveCfg = Release|Any CPU

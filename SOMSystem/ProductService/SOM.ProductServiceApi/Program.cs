@@ -22,9 +22,7 @@ builder.Services.AddApplication(builder.Configuration);
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddAutoMapper(typeof(ProductMapperProfile));
 
-//builder.Services.AddScoped<ConsumerBase, ProductConsumer>();
 builder.Services.AddHostedService<ProductConsumer>();
-//builder.Services.AddSingleton<IHostedService, ProductConsumer>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
