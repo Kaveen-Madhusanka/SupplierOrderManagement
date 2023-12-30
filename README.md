@@ -12,4 +12,7 @@ Focusing on managing orders , suppliers and inventory. It maintains a concise an
 ![boundy context](https://github.com/Kaveen-Madhusanka/SupplierOrderManagement/assets/11901975/2276b83e-21b5-4643-a0fe-331d44502fa5)
 
 
+### Events distribution through services
+![image](https://github.com/Kaveen-Madhusanka/SupplierOrderManagement/assets/11901975/a96ff3e9-159a-44d0-a82e-e8274de98144)
+
 
