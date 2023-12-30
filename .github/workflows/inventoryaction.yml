@@ -3,11 +3,11 @@
 name: Inventory Service Build
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
     paths:
       - 'SOMSystem/InventoryService/**'
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
     paths:
       - 'SOMSystem/InventoryService/**'
 jobs:
@@ -18,7 +18,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 8.0.x
+        dotnet-version: 8.x
     - name: Restore dependencies
       run: dotnet restore SOMSystem/InventoryService/SOM.InventoryApi/SOM.InventoryApi.csproj
     - name: Build
