@@ -7,7 +7,7 @@ on:
     paths:
       - 'SOMSystem/ProductService/**'
   pull_request:
-    branches: [ "mian" ]
+    branches: [ "main" ]
     paths:
       - 'SOMSystem/ProductService/**'
 jobs:
