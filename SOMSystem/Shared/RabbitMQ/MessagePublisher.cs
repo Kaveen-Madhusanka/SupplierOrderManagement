@@ -6,6 +6,8 @@ using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace RabbitMQ;
 
+// TODO: need to refact
+
 public class MessagePublisher: IMessagePublisher
 {
     private IConnection _connection;
@@ -14,6 +16,7 @@ public class MessagePublisher: IMessagePublisher
 
     public MessagePublisher(IConnectionFactory connectionFactory)
     {
+        // TODO: Need to handle multiple connection and multiple channel issue
         _connection = connectionFactory.CreateConnection();
         _channel = _connection.CreateModel();
         _channel.ExchangeDeclare(ExchangeName, ExchangeType.Topic);

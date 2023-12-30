@@ -7,6 +7,8 @@ using SOM.SupplierService.Application.Mappers;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.AddServiceDefaults();
+
 builder.Host.UseSerilog((ctx, lc) => lc
     .WriteTo.Console()
     .WriteTo.Seq("http://localhost:5341"));
@@ -26,9 +28,11 @@ builder.Services.AddHttpsRedirection(options =>
     options.HttpsPort = 5020;
 });
 
-builder.Services.AddRabbitMq(builder.Configuration);
+builder.AddRabbitMqEventBus("EventBus");
 
 var app = builder.Build();
+
+app.MapDefaultEndpoints();
 
 if (app.Environment.IsDevelopment())
 {
