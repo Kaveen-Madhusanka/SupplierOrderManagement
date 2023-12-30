@@ -3,11 +3,11 @@
 name: Product Service Build
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
     paths:
       - 'SOMSystem/ProductService/**'
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
     paths:
       - 'SOMSystem/ProductService/**'
 jobs:
