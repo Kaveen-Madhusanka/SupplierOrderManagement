@@ -3,11 +3,11 @@
 name: Supplier Service Build
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
     paths:
       - 'SOMSystem/SupplierService/**'
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
     paths:
       - 'SOMSystem/SupplierService/**'
 jobs:
@@ -18,7 +18,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 8.0.x
+        dotnet-version: 8.x
     - name: Restore dependencies
       run: dotnet restore SOMSystem/SupplierService/SOM.SupplierServiceApi/SOM.SupplierServiceApi.csproj
     - name: Build
