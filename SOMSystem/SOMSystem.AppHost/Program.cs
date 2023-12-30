@@ -12,7 +12,5 @@ builder.AddProject<SOM_SupplierServiceApi>("som.supplierserviceapi")
 builder.AddProject<SOM_ProductServiceApi>("som.productserviceapi")
     .WithReference(rabbitMqContainer);
 
-
-
 builder.Build().Run();
  
